@@ -11,7 +11,7 @@ import uuid
 
 
 def upload_location(instance, filename):
-    filebase, extension = filename.split(".")
+    filebase, extension = filename.split(".")[-1]
     randname=uuid.uuid4().hex
     print extension
     return "%s.%s" %(randname, extension)
